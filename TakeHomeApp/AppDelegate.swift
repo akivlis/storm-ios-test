@@ -7,8 +7,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
  
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let navigationController = UINavigationController(rootViewController: PlacesViewController())
-        window.rootViewController = navigationController
+        window.rootViewController = ViewController()
         window.makeKeyAndVisible()
         
         self.window = window
