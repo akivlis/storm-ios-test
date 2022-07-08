@@ -40,6 +40,7 @@ class PlacesViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.places = places
                 }
+                print(places.map { $0.name })
             }
         }
     }
@@ -50,10 +51,6 @@ class PlacesViewController: UIViewController {
 extension PlacesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
-
-        let viewModel = PhotosViewModel(placeId: places[indexPath.row].id)
-        let photosViewController = PhotosViewController(viewModel: viewModel)
-        navigationController?.pushViewController(photosViewController, animated: true)
     }
 }
 
